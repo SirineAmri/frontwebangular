@@ -7,6 +7,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
+import { MatchComponent } from './match/match.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    MatchComponent
   ],
   imports: [
     BrowserModule,
