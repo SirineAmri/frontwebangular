@@ -7,13 +7,14 @@ import {Observable} from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
+  PATH_OF_API1 = 'http://localhost:9091';
   PATH_OF_API = 'http://localhost:9090';
 
 
   requestHeader = new HttpHeaders({ 'No-Auth': 'True' });
   constructor(
     private httpclient: HttpClient,
-    private userAuthService: UserAuthService
+    private userAuthService: UserAuthService,
   ) {}
 
   // tslint:disable-next-line:typedef
@@ -49,6 +50,6 @@ export class UserService {
   }
   
   registerNewUser(user: any): Observable<any> {
-    return this.httpclient.post(`${this.PATH_OF_API}/user/registerNewUser`, user);
+    return this.httpclient.post(`${this.PATH_OF_API1}/user/registerNewUser`, user);
   }
 }
