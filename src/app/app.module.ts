@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { MatchComponent } from './match/match.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { MatchComponent } from './match/match.component';
     HeaderComponent,
     HomeComponent,
     LoginRegisterComponent,
-    MatchComponent
+    MatchComponent,
   ],
   imports: [
     BrowserModule,
