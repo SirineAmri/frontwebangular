@@ -206,3 +206,33 @@ input {
     height: 40px;
     width: 40px;
 }
+
+
+/* Style de la liste déroulante */
+select {
+    padding: 10px; /* Ajoutez ou modifiez la taille de la marge intérieure */
+    font-size: 14px; /* Modifiez la taille de la police */
+    border: 1px solid #ccc; /* Ajoutez ou modifiez la bordure */
+    border-radius: 5px; /* Ajoutez ou modifiez la bordure arrondie */
+    background-color: #f8f8f8; /* Modifiez la couleur de fond */
+    color: #333; /* Modifiez la couleur du texte */
+    width: 110%; /* Modifiez la largeur de la liste déroulante */
+    cursor: pointer; /* Changez le curseur au survol */
+}
+
+/* Style pour les options de la liste déroulante */
+select option {
+    background-color: #fff; /* Modifiez la couleur de fond des options */
+    color: #333; /* Modifiez la couleur du texte des options */
+}
+
+/* Style au survol de la liste déroulante */
+select:hover {
+    border-color: #22b1c3; /* Changez la couleur de la bordure au survol */
+}
+
+
+/* Style pour le texte en taille plus grande */
+.large-text {
+    font-size: 16px; /* Ajustez la taille de police selon vos besoins */
+}
