@@ -3,5 +3,6 @@ export class User {
     userFirstName: any;
     userLastName: any;
     userPassword: any;
+    userEmail:any;
     role : any;
 }

@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserAuthService {
   private username: string | null = null;
+
   constructor() {}
 
   setLoggedInUsername(username: string): void {
@@ -18,9 +19,14 @@ export class UserAuthService {
     localStorage.setItem('roles', JSON.stringify(roles));
   }
 
-  public getRoles(): [] {
-    return JSON.parse(localStorage.getItem('roles') ?? '');
+  public getRoles(): any[] {
+    const rolesString = localStorage.getItem('roles');
+    if (rolesString) {
+      return JSON.parse(rolesString);
+    }
+    return []; // Retourne un tableau vide si les rôles ne sont pas trouvés dans le localStorage.
   }
+  
 
   public setToken(jwtToken: string) {
     localStorage.setItem('jwtToken', jwtToken);
@@ -36,4 +42,6 @@ export class UserAuthService {
   public isLoggedIn() {
     return this.getRoles() && this.getToken();
   }
+
+
 }

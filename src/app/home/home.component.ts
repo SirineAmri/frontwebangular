@@ -16,7 +16,7 @@ export class HomeComponent {
       this.router.navigate(['/match']);
     } else {
       // L'utilisateur n'est pas connecté, redirigez-le vers la page de connexion/inscription
-      this.router.navigate(['/loginRegister']);
+      this.router.navigate(['/sinscrire']);
     }
   }
 }

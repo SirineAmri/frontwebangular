@@ -18,12 +18,14 @@ export class LoginRegisterComponent  implements AfterViewInit {
     userFirstName: '',
     userLastName: '',
     userPassword: '',
+    userEmail:'',
     role : [],
   };
   registrationSuccess = false;
   registrationError = false;
 
   userRole = '';
+  isLoggedIn: boolean = false;
 
   constructor(private renderer: Renderer2, private el: ElementRef, 
     private userService: UserService, private router: Router, private userAuthService: UserAuthService,
@@ -47,11 +49,11 @@ export class LoginRegisterComponent  implements AfterViewInit {
   registerUser() {
     this.userService.registerNewUser(this.newUser).subscribe(
       (response) => {
-        this.showSuccessAlert('Matricule valide Compte créé avec succès.');
-        this.router.navigate(['/login']);
+        this.showSuccessAlert('Votre compte a créé avec succès.');
+        location.reload();
       },
       (error) => {
-          this.showErrorAlert(' Erreur lors de la création du compte Matricule invalide. Veuillez saisir un matricule existant.');
+          this.showErrorAlert(' Erreur lors de la création du compte. Veuillez réssayer.');
         }
     );
   }
@@ -71,15 +73,14 @@ export class LoginRegisterComponent  implements AfterViewInit {
         (response: any) => {
           this.userAuthService.setRoles(response.user.role);
           this.userAuthService.setToken(response.jwtToken);
-  
+          this.isLoggedIn = true;
+          localStorage.setItem('isLoggedIn', 'true');
+          this.activateAccount(response.verificationToken);
           const role = response.user.role[0].roleName;
-          if (role === 'undefined') {
-            this.router.navigate(['']);
-          }
           if (role === 'Admin') {
             this.router.navigate(['/admin']);
           } else {
-            this.router.navigate(['/match']);
+            this.router.navigate(['/home']);
           }
         },
         (error) => {
@@ -87,5 +88,17 @@ export class LoginRegisterComponent  implements AfterViewInit {
         }
       );
     }
-
+    activateAccount(verificationToken: string) {
+      this.userService.activateUser(verificationToken).subscribe(
+        () => {
+          // Account activation successful, handle accordingly (e.g., show a success message)
+          console.log('Account activated successfully.');
+        },
+        (error) => {
+          // Account activation failed, handle accordingly (e.g., show an error message)
+          console.error('Failed to activate account:', error);
+        }
+      );
+    }
+  
 }

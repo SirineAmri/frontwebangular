@@ -3,12 +3,14 @@ import { Injectable } from '@angular/core';
 import { UserAuthService } from './user-auth.service';
 import {Observable} from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   PATH_OF_API1 = 'http://localhost:9091';
   PATH_OF_API = 'http://localhost:9090';
+  private isLoggedIn: boolean = false;
 
 
   requestHeader = new HttpHeaders({ 'No-Auth': 'True' });
@@ -17,12 +19,28 @@ export class UserService {
     private userAuthService: UserAuthService,
   ) {}
 
+  isLoggedInFnc(): boolean {
+    console.log(this.isLoggedIn);
+    return this.isLoggedIn;
+  }
+
   // tslint:disable-next-line:typedef
   public login(loginData:any) {
     return this.httpclient.post(this.PATH_OF_API + '/authenticate', loginData, {
       headers: this.requestHeader,
-    });
+    })
   }
+
+  logout(): void {
+    // Perform any necessary cleanup or API calls to invalidate the session
+    this.isLoggedIn = false;
+    localStorage.removeItem('jwtToken');
+    localStorage.removeItem('roles');
+    localStorage.setItem('isLoggedIn', 'false');
+
+
+  }
+
 
   // tslint:disable-next-line:typedef
   public forUser() {
@@ -51,5 +69,8 @@ export class UserService {
   
   registerNewUser(user: any): Observable<any> {
     return this.httpclient.post(`${this.PATH_OF_API1}/user/registerNewUser`, user);
+  }
+  activateUser(verificationToken: string): Observable<any> {
+    return this.httpclient.put(`${this.PATH_OF_API1}/activate/${verificationToken}`, {});
   }
 }

@@ -1,14 +1,14 @@
 <!-- Just an image -->
 <div class="container-fluid">
         <div class="text-center">
-          <img src="../../assets/images/logo2.png" alt="Your Logo" class="img-fluid mt-1 mb-2 h-auto" style="max-width: 7%;"  />
+       <a routerLink="/home"><img src="../../assets/images/logo2.png" alt="Your Logo" class="img-fluid mt-1 mb-2 h-auto" style="max-width: 7%;"  /></a>   
         </div>
       
   
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="#" ngSubmit="registerUser()">
-			<h1>Créer votre compte</h1>
+			<h3>Créer votre compte</h3>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -16,8 +16,9 @@
 			</div>
 			<span>ou utiliser votre email pour s'inscrire</span>
 			<input type="text" placeholder="userName" name="userName" placeholder="userName" [(ngModel)]="newUser.userName" />
-			<input type="userFirstName" placeholder="userFirstName" name="userFirstName" placeholder="userFirstName" [(ngModel)]="newUser.userFirstName"/>
-			<input type="userFirstName" placeholder="userLastName" name="userLastName" placeholder="userLastName" [(ngModel)]="newUser.userLastName"/>
+			<input type="text" placeholder="email" name="userEmail" placeholder="userEmail" [(ngModel)]="newUser.userEmail"/>
+			<input type="text" placeholder="userFirstName" name="userFirstName" placeholder="userFirstName" [(ngModel)]="newUser.userFirstName"/>
+			<input type="text" placeholder="userLastName" name="userLastName" placeholder="userLastName" [(ngModel)]="newUser.userLastName"/>
 			<input type="password" placeholder="Password" name="userPassword" placeholder="userPassword" [(ngModel)]="newUser.userPassword"/>
 			<button (click)="registerUser()">S'inscire</button>
 		</form>

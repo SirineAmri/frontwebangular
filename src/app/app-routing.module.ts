@@ -6,7 +6,8 @@ import { MatchComponent } from './match/match.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent},
-  { path: "loginRegister", component: LoginRegisterComponent},
+  { path: "home", component: HomeComponent},
+  { path: "sinscrire", component: LoginRegisterComponent},
   { path: "match", component: MatchComponent}
 
 

@@ -39,7 +39,9 @@
                         <li><a href="deals.html">Deals</a></li>
                         <li><a href="reservation.html">Reservation</a></li>
                         <li><a href="reservation.html">Book Yours</a></li>
-                        <li><a href="reservation.html">Login</a></li>
+                        <li><a *ngIf="isLoggedIn" (click)="logout()">déconnexion</a></li>
+                        <li><a *ngIf="!isLoggedIn" routerLink="sinscrire">connexion</a></li>
+
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -51,3 +53,5 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
+
+
