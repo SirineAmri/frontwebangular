@@ -10,6 +10,8 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
 import { MatchComponent } from './match/match.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ApropsComponent } from './aprops/aprops.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     LoginRegisterComponent,
-    MatchComponent
+    MatchComponent,
+    ApropsComponent,
   ],
   imports: [
     BrowserModule,
