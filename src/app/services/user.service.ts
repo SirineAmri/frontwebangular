@@ -38,7 +38,6 @@ export class UserService {
     localStorage.removeItem('roles');
     localStorage.setItem('isLoggedIn', 'false');
 
-
   }
 
 
@@ -72,5 +71,13 @@ export class UserService {
   }
   activateUser(verificationToken: string): Observable<any> {
     return this.httpclient.put(`${this.PATH_OF_API1}/activate/${verificationToken}`, {});
+  }
+  resetPasswordEmail(email: string): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const resetPassword = { email: email };
+
+    return this.httpclient.post<any>(`${this.PATH_OF_API}/user/checkEmail`, resetPassword, {
+      headers: headers,
+    });
   }
 }

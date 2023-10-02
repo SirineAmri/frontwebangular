@@ -11,6 +11,7 @@ import { MatchComponent } from './match/match.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ApropsComponent } from './aprops/aprops.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ApropsComponent } from './aprops/aprops.component';
     LoginRegisterComponent,
     MatchComponent,
     ApropsComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

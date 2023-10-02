@@ -36,12 +36,11 @@
                     <ul class="nav">
                         <li><a href="index.html" class="active">Acceuil</a></li>
                         <li><a routerLink="/apropos">A propos</a></li>
-                        <li><a href="deals.html">Forfait</a></li>
-                        <li><a href="reservation.html">Formulaire</a></li>
                         <li><a href="reservation.html">Reclamation</a></li>
+                        <li><a href="reservation.html">Formulaire</a></li>
+                        <li><a routerLink="/profile">profile</a></li>
                         <li><a *ngIf="isLoggedIn" (click)="logout()">déconnexion</a></li>
-                        <li><a *ngIf="!isLoggedIn" routerLink="sinscrire">connexion</a></li>
-
+                        <li><a *ngIf="!isLoggedIn" routerLink="/sinscrire">connexion</a></li>
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
