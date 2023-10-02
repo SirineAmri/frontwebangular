@@ -9,8 +9,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent {
-  constructor(private userService: UserService){}
-  newUser: User = {
+  constructor(private userService: UserService, private userAuthService: UserAuthService){}
+  user: User = {
     userName: '',
     userFirstName: '',
     userLastName: '',
@@ -18,21 +18,21 @@ export class UserProfileComponent {
     userEmail:'',
     role : [],
   };
+
   resultMessage: any;
 
   ngOnInit() {
   }
   resetPassword() {
-    this.userService.resetPasswordEmail(this.newUser.userEmail).subscribe(
+   const email =this.user.userEmail // Remplacez par l'e-mail de l'utilisateur
+    this.userService.resetPasswordEmail(email).subscribe(
       (response) => {
-        this.resultMessage = response.result; // Assuming your response has a 'result' property
+        this.resultMessage = response.result;
       },
       (error) => {
-        console.error('Error:', error);
-        this.resultMessage = 'An error occurred.';
+        console.error('Erreur lors de la réinitialisation du mot de passe :', error);
       }
     );
   }
-
 
 }

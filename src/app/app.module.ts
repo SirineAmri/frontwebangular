@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ApropsComponent } from './aprops/aprops.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -29,7 +32,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,MatMenuModule
 
   ],
   providers: [],
