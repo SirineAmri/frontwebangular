@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ApropsComponent } from './aprops/aprops.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ReclamationComponent } from './reclamation/reclamation.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     MatchComponent,
     ApropsComponent,
     UserProfileComponent,
+    ReclamationComponent,
   ],
   imports: [
     BrowserModule,
