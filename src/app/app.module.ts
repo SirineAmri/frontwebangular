@@ -15,7 +15,11 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import { DialogElementsExampleDialogComponent } from './dialog-elements-example-dialog/dialog-elements-example-dialog.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatchComponent,
     ApropsComponent,
     UserProfileComponent,
+    DialogElementsExampleDialogComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,11 @@ import {MatButtonModule} from '@angular/material/button';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule,MatMenuModule
+    MatButtonModule,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
 
   ],
   providers: [],

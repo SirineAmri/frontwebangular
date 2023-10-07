@@ -80,7 +80,7 @@ export class LoginRegisterComponent  implements AfterViewInit {
           if (role === 'Admin') {
             this.router.navigate(['/admin']);
           } else {
-            this.router.navigate(['/match']);
+            this.router.navigate(['/home']);
           }
         },
         (error) => {

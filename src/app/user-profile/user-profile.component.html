@@ -95,9 +95,15 @@
                     <div class="col-sm-12">
                       <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
                     </div>
-                    <div class="col-sm-12 mt-2">
-                    <a class="btn btn-info " (click)="resetPassword()" >changer mot de passe </a>
-                    </div>
+                      <div class="col-sm-6 mt-2">
+                        <button mat-button (click)="openDialog();resetPassword()">changer mot de passe</button>
+                      </div>
+                      
+                    
+
+
+
+                    
                   </div>
                 </div>
               </div>
@@ -166,3 +172,5 @@
 
         </div>
     </div>
+
+
