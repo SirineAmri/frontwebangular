@@ -14,6 +14,8 @@ import { ApropsComponent } from './aprops/aprops.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { PremiumComponent } from './premium/premium.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { BlogComponent } from './blog/blog.component';
+import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     UserProfileComponent,
     PremiumComponent,
     ForgetPasswordComponent,
+    BlogComponent,
+    DialogOverviewExampleDialogComponent,
   ],
   imports: [
     BrowserModule,
