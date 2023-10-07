@@ -12,7 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ApropsComponent } from './aprops/aprops.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { ReclamationComponent } from './reclamation/reclamation.component';
+import { PremiumComponent } from './premium/premium.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ReclamationComponent } from './reclamation/reclamation.component';
     MatchComponent,
     ApropsComponent,
     UserProfileComponent,
-    ReclamationComponent,
+    PremiumComponent,
+    ForgetPasswordComponent,
   ],
   imports: [
     BrowserModule,

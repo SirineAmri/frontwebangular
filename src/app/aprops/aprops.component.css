@@ -40,7 +40,7 @@ body{
   }
   
   .share a.fb{
-    background: #3c5b9b url(https://cdn1.iconfinder.com/data/icons/social-media-icons-2/83/facebook_64x83.png) no-repeat center;
+    background: #22b3c1 url(https://cdn1.iconfinder.com/data/icons/social-media-icons-2/83/facebook_64x83.png) no-repeat center;
     top: -200px;
     transition: all 0.3s ease-in-out;
   }
@@ -91,14 +91,14 @@ body{
     margin-bottom: 8%;
     margin-top: -10%;
     text-align: center;
-    color: #0062cc;
+    color: #22b3c1;
 }
 .contact-form .btnContact {
     width: 50%;
     border: none;
     border-radius: 1rem;
     padding: 1.5%;
-    background: #356adc;
+    background: #22b3c1;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -109,7 +109,7 @@ body{
     border-radius: 1rem;
     padding: 1.5%;
     color: #fff;
-    background-color: #0062cc;
+    background-color: #22b3c1;
     border: none;
     cursor: pointer;
 }
