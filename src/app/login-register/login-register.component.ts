@@ -19,6 +19,7 @@ export class LoginRegisterComponent  implements AfterViewInit {
     userLastName: '',
     userPassword: '',
     userEmail:'',
+    userCode:'',
     role : [],
   };
   registrationSuccess = false;

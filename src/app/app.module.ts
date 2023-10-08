@@ -18,7 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
-import { DialogElementsExampleDialogComponent } from './dialog-elements-example-dialog/dialog-elements-example-dialog.component';
+import { DialogElementsExampleDialogComponent } from './ResetPasswordFromProfil/dialog-elements-example-dialog.component';
 import { TestComponent } from './test/test.component';
 
 @NgModule({

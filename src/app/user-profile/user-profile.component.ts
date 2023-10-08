@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input  } from '@angular/core';
 import { User } from '../model/User';
 import { UserAuthService } from '../services/user-auth.service';
 import { UserService } from '../services/user.service';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogElementsExampleDialogComponent } from '../dialog-elements-example-dialog/dialog-elements-example-dialog.component';
+import { DialogElementsExampleDialogComponent } from '../ResetPasswordFromProfil/dialog-elements-example-dialog.component';
 
 @Component({
   selector: 'app-user-profile',
@@ -11,6 +11,8 @@ import { DialogElementsExampleDialogComponent } from '../dialog-elements-example
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent {
+  @Input() passToResetPwdVal!: boolean;
+
   constructor(private userService: UserService, private userAuthService: UserAuthService,
     public dialog: MatDialog){}
   user: User = {
@@ -19,6 +21,7 @@ export class UserProfileComponent {
     userLastName: '',
     userPassword: '',
     userEmail:'',
+    userCode:'',
     role : [],
   };
 
