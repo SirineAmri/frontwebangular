@@ -20,6 +20,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 import { DialogElementsExampleDialogComponent } from './ResetPasswordFromProfil/dialog-elements-example-dialog.component';
 import { TestComponent } from './test/test.component';
+import { PremiumComponent } from './premium/premium.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { BlogComponent } from './blog/blog.component';
+import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +38,10 @@ import { TestComponent } from './test/test.component';
     UserProfileComponent,
     DialogElementsExampleDialogComponent,
     TestComponent,
+    PremiumComponent,
+    ForgetPasswordComponent,
+    BlogComponent,
+    DialogOverviewExampleDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@
                     <!-- *** Logo Start *** -->
                     <style>
                         .logo img {
-                            height: 105px; /* Adjust the height to your desired size */
+                            height: 82px; /* Adjust the height to your desired size */
         width: auto;
         margin-top: -10px; /* Adjust the top margin */
         margin-left: -10px; /* Adjust the left margin */
@@ -23,8 +23,10 @@
                     <ul class="nav">
                         <li><a href="index.html" class="active">Acceuil</a></li>
                         <li><a routerLink="/apropos">A propos</a></li>
-                        <li><a href="reservation.html">Formulaire</a></li>
-                        <li><a href="reservation.html">Réclamation</a></li>
+                        <li><a routerLink="/premium">Premium</a></li>
+                        <li><a routerLink="/blog">Blog</a></li>
+                        <li><a routerLink="/profile">profile</a></li>
+                        <li><a *ngIf="isLoggedIn" (click)="logout()">déconnexion</a></li>
                         <li><a *ngIf="!isLoggedIn" routerLink="/sinscrire">connexion</a></li>
                         <li><button *ngIf="isLoggedIn"  mat-button [matMenuTriggerFor]="menu"><i class="fa-solid fa-user" style="color: #ffffff;"></i></button>
                             <mat-menu #menu="matMenu">
