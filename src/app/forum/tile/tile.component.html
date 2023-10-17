@@ -1,0 +1,47 @@
+<!-- Display Posts-->
+<div style="margin-left: 500px;">
+  <div class="row post" *ngFor="let post of posts">
+    <!-- Section to Display Post Information-->
+    <div class="col-md-11">
+    <span class="subreddit-info">
+    </span>
+      <hr />
+      <div class="post-title">
+        <a class="postname" >{{post.name}}</a>
+      </div>
+      <div>
+        <p class="post-text" [innerHtml]="post.description"></p>
+      </div>
+      <hr />
+      <span>
+      <a >
+        <!---->
+
+        <!---->
+        <div class="wrap">
+          <div class="rect">
+              <img (click)="reactLIKE(post.id)" class="btn circle" src="https://www.dropbox.com/s/rgfnea7od54xj4m/like.gif?raw=1" alt="like" title="Like">
+              <img (click)="reactLOVE(post.id)" class="btn circle" src="https://www.dropbox.com/s/sykc43x39wqxlkz/love.gif?raw=1" alt="love" title="Love">
+              <img (click)="reactHAHA(post.id)" class="btn circle" src="https://www.dropbox.com/s/vdg0a8i0kyd16zk/haha.gif?raw=1" alt="haha" title="Haha">
+              <img (click)="reactWOW(post.id)" class="btn circle" src="https://www.dropbox.com/s/ydl0fm5kayxz0e5/wow.gif?raw=1" alt="wow" title="Wow">
+              <img (click)="reactDISLIKE(post.id)" class="btn circle dislike" src="https://www.dropbox.com/s/rgfnea7od54xj4m/like.gif?raw=1" alt="" title="Dislike">
+              <img (click)="reactLIKE(post.id)" class="btn circle" src="https://www.dropbox.com/s/52n5woibt3vrs76/sad.gif?raw=1" alt="sad" title="Sad">
+              <img (click)="reactLIKE(post.id)" class="btn circle" src="https://www.dropbox.com/s/kail2xnglbutusv/angry.gif?raw=1" alt="angry" title="Angry">
+          </div>
+      </div>
+      <div>
+      </div>
+      <script src="https://unpkg.com/tippy.js@2.1.1/dist/tippy.all.min.js"></script>
+      </a>
+      <div class="actions">
+      <button class="button-29" role="button" (click)="goToPost(post.id)">
+        Read Post
+      </button>
+      <button class="button-29" role="button" (click)="deletePost(post.id)">Delete</button>
+      <button class="button-29" role="button" >update</button>
+
+    </div>
+    </span>
+    </div>
+  </div>
+</div>

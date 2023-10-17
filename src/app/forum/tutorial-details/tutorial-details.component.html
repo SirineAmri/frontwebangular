@@ -1,0 +1,64 @@
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentTutorial" class="edit-form">
+    <h4>Tutorial</h4>
+    <form (ngSubmit)="updateTutorial()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentTutorial.title"
+          name="title"
+        >
+
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentTutorial.description"
+          name="description"
+        >
+      </div>
+
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentTutorial.published ? "Published" : "Pending" }}
+      </div>
+
+      <button
+        class="badge badge-primary mr-2"
+        *ngIf="currentTutorial.published; else publishButton"
+        (click)="updatePublished(false)"
+      >
+        Unpublish
+      </button>
+      <ng-template #publishButton>
+        <button
+          class="badge badge-primary mr-2"
+          *ngIf="!currentTutorial.published"
+          (click)="updatePublished(true)"
+        >
+          Publish
+        </button>
+      </ng-template>
+
+      <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+        Delete
+      </button>
+
+      <button type="submit" class="badge badge-success">
+        Update
+      </button>
+    </form>
+  </div>
+
+  <div *ngIf="!currentTutorial">
+    <br />
+    <p>Cannot access this Tutorial...</p>
+  </div>
+
+  <!-- Move outside of the form -->
+  <p>{{ message }}</p>
+</div>

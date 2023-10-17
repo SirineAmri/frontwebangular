@@ -1,0 +1,305 @@
+
+
+.post{
+  --post-line-color: #ccc;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.8);
+  color: #878A8C;
+  position: relative;
+  border-radius: 4px;
+  padding:5px;
+}
+
+.btnCommments{
+  border-radius: 2px solid;
+  color: #878A8C;
+  opacity: 1;
+}
+
+.btnCommments:hover{
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+.post-title{
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.posturl, .postname{
+  color: black;
+}
+
+.subreddit-text{
+  font-weight: bold;
+}
+
+.post-text{
+  margin-top: 10px;
+}
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+/**/
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  width: 350px;
+  height: 50px;
+  margin-bottom: 10px;
+
+}
+
+.rect {
+  border: 1px solid rgba(0, 0, 0, .3);
+  background-color: white;
+  border-radius: 90px;
+  overflow: hidden;
+  -webkit-animation: rec .2s ease-in-out;
+  animation: rec .2s ease-in-out;
+  height: 50px;
+  -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1);
+}
+
+
+@-webkit-keyframes rec {
+  0% {
+    -webkit-transform: translate(0px, 400px);
+    transform: translate(0px, 400px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+
+
+@keyframes rec {
+  0% {
+    -webkit-transform: translate(0px, 400px);
+    transform: translate(0px, 400px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  -webkit-transition: .2s ease all;
+  transition: .2s ease all;
+  -webkit-animation: emo .3s ease-in-out.1s;
+  animation: emo .3s ease-in-out.1s;
+}
+
+.circle:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.dislike {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.dislike:hover {
+  -webkit-transform: scale(1.5) rotate(180deg);
+  transform: scale(1.5) rotate(180deg);
+}
+
+@-webkit-keyframes emo {
+  0% {
+    -webkit-transform: scale(5) translate(0px, -1px);
+    transform: scale(5) translate(0px, 400px);
+  }
+  100% {
+    -webkit-transform: scale(1) translate(0px, 0px);
+    transform: scale(1) translate(0px, 0px);
+  }
+}
+
+@keyframes emo {
+  0% {
+    -webkit-transform: scale(5) translate(0px, -1px);
+    transform: scale(5) translate(0px, 400px);
+  }
+  100% {
+    -webkit-transform: scale(1) translate(0px, 0px);
+    transform: scale(1) translate(0px, 0px);
+  }
+}
+
+.logo {
+  margin-top: -150px;
+  margin-left: -15px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0px);
+  transform: perspective(1px) translateZ(0px);
+  -webkit-box-shadow: 0 0 1px transparent;
+  box-shadow: 0 0 1px transparent;
+  height: 5px;
+  position: absolute;
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active {
+  -webkit-animation-name: logo;
+  animation-name: logo;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  cursor: wait;
+}
+
+@-webkit-keyframes logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+@keyframes logo {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+@media (min-width: 426px) and (max-width: 650px) {
+  .rect {
+    height: 60px;
+  }
+  .circle {
+    height: 60px;
+    width: 60px;
+  }
+  .logo {
+    height: 60px;
+    margin-top: -90px;
+    margin-left: -12px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .rect {
+    height: 50px;
+  }
+  .circle {
+    height: 50px;
+    width: 50px;
+  }
+  .logo {
+    height: 50px;
+    margin-top: -80px;
+    margin-left: -10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .rect {
+    height: 50px;
+  }
+  .circle {
+    height: 49px;
+    width: 49px;
+  }
+  .logo {
+    height: 50px;
+    margin-top: -80px;
+    margin-left: -10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .rect {
+    height: 40px;
+  }
+  .circle {
+    height: 40px;
+    width: 40px;
+  }
+  .logo {
+    height: 40px;
+    margin-top: -70px;
+    margin-left: -5px;
+  }
+}
+
+/**/
+.actions{
+  margin-left: 620px;
+}
+/**/

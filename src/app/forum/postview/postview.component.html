@@ -1,0 +1,78 @@
+<div class="container" style="margin-left: 300px;margin-right: 10px;">
+  <div class="row">
+    <hr />
+    <div class="col-md-12">
+      <div class="row post">
+        <div class="col-md-1">
+          <!--<app-vote-button [post]="post"></app-vote-button>-->
+        </div>
+        <div class="col-md-11">
+
+          <hr />
+          <a  class="post-title">{{post.name}}</a>
+
+          <div>
+            <div class="wrap">
+              <div class="rect">
+                <img (click)="reactLIKE(post.id)" class="btn circle" src="https://www.dropbox.com/s/rgfnea7od54xj4m/like.gif?raw=1" alt="like" title="Like" width="70" height="70">
+                {{LIKE}}
+                <img (click)="reactLOVE(post.id)" class="btn circle" src="https://www.dropbox.com/s/sykc43x39wqxlkz/love.gif?raw=1" alt="love" title="Love" width="70" height="70">
+                {{LOVE}}
+                <img (click)="reactHAHA(post.id)" class="btn circle" src="https://www.dropbox.com/s/vdg0a8i0kyd16zk/haha.gif?raw=1" alt="haha" title="Haha" width="70" height="70">
+                {{HAHA}}
+                <img (click)="reactWOW(post.id)" class="btn circle" src="https://www.dropbox.com/s/ydl0fm5kayxz0e5/wow.gif?raw=1" alt="wow" title="Wow" width="70" height="70">
+                {{WOW}}
+                <img (click)="reactDISLIKE(post.id)" class="btn circle dislike" src="https://www.dropbox.com/s/rgfnea7od54xj4m/like.gif?raw=1" alt="" title="Dislike" width="70" height="70">
+                {{DISLIKE}}
+                <img (click)="reactLIKE(post.id)" class="btn circle" src="https://www.dropbox.com/s/52n5woibt3vrs76/sad.gif?raw=1" alt="sad" title="Sad" width="70" height="70">
+                {{LIKE}}
+              </div>
+            </div>
+            <p class="post-text" [innerHtml]="post.description"></p>
+          </div>
+          <div class="post-comment">
+            <form [formGroup]="commentForm" (ngSubmit)="postComment()">
+              <div class="form-group">
+                <textarea class="form-control" [formControlName]="'content'" placeholder="Your Thoughts?"></textarea>
+              </div>
+              <button class="btn btn-primary submit-form me-2" >Comment</button>
+            </form>
+          </div>
+          <div style="margin-top: 60px;" *ngFor="let comment of comments" >
+            <div class="comment">
+              <div class="username">
+                <a >User</a>
+              </div>
+              <div>
+              </div>
+              <b>{{comment.content}}</b>
+            </div>
+            <div>
+              <div class="post-comment">
+                <form [formGroup]="replyForm" (ngSubmit)="postReply()">
+                  <div class="form-group">
+                    <textarea class="form-control" [formControlName]="'contentReply'" placeholder="Your Thoughts?"></textarea>
+                  </div>
+                  <button class="btn btn-primary submit-form me-2" (click)="deleteComment(comment.id)" >delete</button>
+                  <button class="btn btn-primary submit-form me-2" >reply</button>
+                </form>
+              </div>
+            </div>
+            <hr />
+            <div style="margin-top: 60px; width: 90%;" *ngFor="let reply of replies">
+              <div class="comment">
+                <div class="username">
+                  <a >User</a>
+                </div>
+                <div>
+                </div>
+                <b>{{reply.content}}</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
